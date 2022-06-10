@@ -21,13 +21,13 @@ export default function App() {
     const element = evt.target.innerText.toLowerCase();
     switch (element) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevState => prevState + 1);
         break;
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevState => prevState + 1);
         break;
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevState => prevState + 1);
         break;
 
       default:
